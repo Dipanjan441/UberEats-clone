@@ -1,12 +1,13 @@
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import HeaderTabs from '../components/HeaderTabs'
 import SearchBar from '../components/SearchBar'
 import Categories from '../components/Categories'
-
+import ResturantItems, { localRestaurants } from '../components/ResturantItems'
 
 const App = () => {
-  const [activeState,setActiveState] = useState('Delivery')
+  const [activeState,setActiveState] = useState('Delivery');
+  const [localResturantDetails,setLocalResturantDetails] = useState(localRestaurants);
   return (
     <SafeAreaView style={{backgroundColor:'#eee',flex:1}}>
       <View style={{backgroundColor:'white',padding:15}}>
@@ -16,7 +17,10 @@ const App = () => {
         </View>
         <SearchBar />
       </View>
-      <Categories />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Categories />
+        <ResturantItems localResturant={localResturantDetails} />
+      </ScrollView>
     </SafeAreaView>
   )
 }
