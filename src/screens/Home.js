@@ -2,6 +2,7 @@ import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-na
 import React, { useState } from 'react'
 import HeaderTabs from '../components/HeaderTabs'
 import SearchBar from '../components/SearchBar'
+import Categories from '../components/Categories'
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         </View>
         <SearchBar />
       </View>
+      <Categories />
     </SafeAreaView>
   )
 }
