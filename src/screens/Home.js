@@ -4,6 +4,8 @@ import HeaderTabs from '../components/HeaderTabs'
 import SearchBar from '../components/SearchBar'
 import Categories from '../components/Categories'
 import ResturantItems, { localRestaurants } from '../components/ResturantItems'
+import { Divider } from 'react-native-elements/dist/divider/Divider'
+import ButtonTabs from '../components/ButtonTabs'
 
 const App = () => {
   const [activeState,setActiveState] = useState('Delivery');
@@ -21,6 +23,8 @@ const App = () => {
         <Categories />
         <ResturantItems localResturant={localResturantDetails} />
       </ScrollView>
+      <Divider width={1} />
+      <ButtonTabs />
     </SafeAreaView>
   )
 }
