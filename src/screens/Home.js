@@ -1,11 +1,11 @@
 import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import HeaderTabs from '../components/HeaderTabs'
-import SearchBar from '../components/SearchBar'
-import Categories from '../components/Categories'
-import ResturantItems, { localRestaurants } from '../components/ResturantItems'
+import HeaderTabs from '../components/home/HeaderTabs'
+import SearchBar from '../components/home/SearchBar'
+import Categories from '../components/home/Categories'
+import ResturantItems, { localRestaurants } from '../components/home/ResturantItems'
 import { Divider } from 'react-native-elements/dist/divider/Divider'
-import ButtonTabs from '../components/ButtonTabs'
+import ButtonTabs from '../components/home/ButtonTabs'
 
 const App = () => {
   const [activeState,setActiveState] = useState('Delivery');
