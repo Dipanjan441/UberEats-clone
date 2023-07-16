@@ -6,6 +6,7 @@ import ResturantDetails from './src/screens/ResturantDetails'
 const App = () => {
   return (
     <ResturantDetails />
+    // <Home />
   )
 }
 
