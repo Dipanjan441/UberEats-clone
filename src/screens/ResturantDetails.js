@@ -4,10 +4,10 @@ import About from '../components/resturantDetails/About'
 import { Divider } from 'react-native-elements/dist/divider/Divider'
 import MenuItems from '../components/resturantDetails/MenuItems'
 
-const ResturantDetails = () => {
+const ResturantDetails = ({route}) => {
   return (
     <View>
-      <About />
+      <About routeData={route.params} />
       <Divider width={1.8} style={{marginVertical:10}} />
       <MenuItems />
     </View>

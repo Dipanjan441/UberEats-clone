@@ -7,7 +7,7 @@ import ResturantItems, { localRestaurants } from '../components/home/ResturantIt
 import { Divider } from 'react-native-elements/dist/divider/Divider'
 import ButtonTabs from '../components/home/ButtonTabs'
 
-const App = () => {
+const Home = ({ navigation }) => {
   const [activeState,setActiveState] = useState('Delivery');
   const [localResturantDetails,setLocalResturantDetails] = useState(localRestaurants);
   return (
@@ -21,7 +21,7 @@ const App = () => {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <ResturantItems localResturant={localResturantDetails} />
+        <ResturantItems localResturant={localResturantDetails} navigation={navigation} />
       </ScrollView>
       <Divider width={1} />
       <ButtonTabs />
@@ -29,6 +29,6 @@ const App = () => {
   )
 }
 
-export default App
+export default Home
 
 const styles = StyleSheet.create({})

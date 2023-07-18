@@ -30,16 +30,24 @@ import MaterialComunity from 'react-native-vector-icons/MaterialCommunityIcons'
       rating: 4.9,
     }
   ];
-const ResturantItems = ({localResturant}) => {
+const ResturantItems = ({localResturant, navigation}) => {
   return (
-    <TouchableOpacity activeOpacity={0.7} style={{marginBottom:50}}>
-        {localResturant.map((items,index)=>(
-        <View key={index} style={{marginTop:10,padding:10,backgroundColor:'white'}}>
-        <ResturantImage image={items.image_url} />
-        <ResturantInfo item={items} />
-        </View>
-        ))}
-    </TouchableOpacity>
+    <>
+    {localResturant.map((items,index)=>(
+        <TouchableOpacity key={index} activeOpacity={0.7} style={{marginBottom:30}} onPress={()=>navigation.navigate('Resturant Details',{
+          title: items.name,
+          image: items.image_url,
+          categories: items.categories,
+          rating: items.rating,
+          ratingCount: items.reviews
+        })} >
+          <View style={{marginTop:10,padding:10,backgroundColor:'white'}}>
+          <ResturantImage image={items.image_url} />
+          <ResturantInfo item={items} />
+          </View>
+        </TouchableOpacity>
+    ))}
+    </>
   )
 }
 

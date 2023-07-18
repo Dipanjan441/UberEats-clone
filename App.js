@@ -2,11 +2,12 @@ import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-na
 import React, { useState } from 'react'
 import Home from './src/screens/Home'
 import ResturantDetails from './src/screens/ResturantDetails'
+import RootNavigation from './Navigation'
+
 
 const App = () => {
   return (
-    <ResturantDetails />
-    // <Home />
+    <RootNavigation />
   )
 }
 

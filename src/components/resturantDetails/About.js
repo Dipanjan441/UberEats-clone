@@ -1,13 +1,18 @@
 import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const About = () => {
+const About = ({routeData}) => {
     const resturantDetails = {
-        title:'Chinsese special kitchen',
-        image: "https://static.onecms.io/wp-content/uploads/sites/9/2020/04/24/ppp-why-wont-anyone-rescue-restaurants-FT-BLOG0420.jpg",
-        categories:['Chiense','Bravery','Coffie'],
-        rating:4.5,
-        ratingCount:3500
+        // title:'Chinsese special kitchen',
+        // image: "https://static.onecms.io/wp-content/uploads/sites/9/2020/04/24/ppp-why-wont-anyone-rescue-restaurants-FT-BLOG0420.jpg",
+        // categories:['Chiense','Bravery','Coffie'],
+        // rating:4.5,
+        // ratingCount:3500
+        title: routeData.title,
+        image: routeData.image,
+        categories: routeData.categories,
+        rating: routeData.rating,
+        ratingCount: routeData.ratingCount
         
     }
     const {title,image,categories,rating,ratingCount} = resturantDetails;
