@@ -80,7 +80,7 @@ const MenuItems = () => {
         }
       ];
     return (
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom:400}}>
             {foodItems.map((item,index)=>(
               <View key={index}>
                 <View style={styles.menuItemsStyles} >
